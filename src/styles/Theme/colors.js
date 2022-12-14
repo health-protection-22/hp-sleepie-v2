@@ -143,6 +143,10 @@ module.exports = {
     primary: '#F9FAFB',
     secondary: '#EDF0F2',
   },
+  background: {
+    primary: '#fff',
+    secondary: '#F3F6F7',
+  },
   highlightGray: '#F2F4F5',
   borderColor: '#CFD6DC',
   drawerButton: '#344054',

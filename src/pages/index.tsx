@@ -5,6 +5,9 @@ import { Page } from '../components/Page';
 import { Nutratherapy } from '../components/Nutratherapy';
 
 import { YoureUnique } from '../components/Home/YoureUnique';
+import { GetStarted } from '../components/Home/GetStarted';
+import GetStartedImage from '../../public/images/GetStarted.png';
+import Image from 'next/image';
 
 const Home = () => {
   const title = 'Sleepie - We offer a safe and optimized natural supplements';
@@ -16,6 +19,10 @@ const Home = () => {
       <Page title={title} description={description}>
         <main className="w-full h-fit">
           <YoureUnique />
+          {/* <GetStarted /> */}
+          <div className="flex justify-center items-center bg-background-secondary">
+            <Image src={GetStartedImage} width={1440} height={2132} alt="test" />
+          </div>
           <Nutratherapy />
         </main>
       </Page>
