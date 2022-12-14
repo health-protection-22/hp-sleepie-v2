@@ -5,7 +5,6 @@ import { Page } from '../components/Page';
 import { Nutratherapy } from '../components/Nutratherapy';
 
 import { YoureUnique } from '../components/Home/YoureUnique';
-import { GetStarted } from '../components/Home/GetStarted';
 import GetStartedImage from '../../public/images/GetStarted.png';
 import Image from 'next/image';
 
