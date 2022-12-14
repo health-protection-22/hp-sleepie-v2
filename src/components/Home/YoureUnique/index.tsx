@@ -11,7 +11,7 @@ import { Title } from './Title';
 
 export function YoureUnique() {
   return (
-    <div className="w-full flex flex-col justify-center items-center my-16 lg:mt-16">
+    <div className="w-full flex flex-col justify-center items-center my-16 lg:mt-16 bg-background-primary">
       <div className="max-w-[1440px] px-6 lg:px-[60px] w-full flex flex-col-reverse gap-10 items-center lg:flex-row lg:justify-between ">
         <div className="lg:max-w-[450px] flex flex-col gap-10 lg:gap-32">
           <div className="flex flex-col gap-6 items-center lg:items-start">
