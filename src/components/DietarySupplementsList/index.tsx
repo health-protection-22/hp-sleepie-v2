@@ -44,7 +44,6 @@ export function DietarySupplementsList({
     () => sortArray(dietarySupplements, order),
     [dietarySupplements, order],
   );
-
   return (
     <SimpleGrid columns={[1, 1, 2, 4]} gap={6} mt={8} textAlign="left">
       {sortedDietarySupplements.slice(0, limit).map(({ slug, title, category }) => (

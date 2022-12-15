@@ -11,25 +11,18 @@ import { RelationProps } from '../../@types/RelationProps';
 
 type MatrixTableProps = {
   columns: {
-    key: string
-    label: string
-  }[]
-  rows: RelationProps[]
-}
+    key: string;
+    label: string;
+  }[];
+  rows: RelationProps[];
+};
 
 export function MatrixTable({ columns, rows }: MatrixTableProps) {
   return (
     <SimpleGrid spacing={4}>
       <Flex display={['none', 'none', 'flex']} gap={4} fontSize="sm">
         {columns.map((column) => (
-          <Flex
-            key={column.key}
-            flex="1"
-            bg="gray.300"
-            p={3}
-            borderRadius="xl"
-            alignItems="center"
-          >
+          <Flex key={column.key} flex="1" bg="gray.300" p={3} borderRadius="xl" alignItems="center">
             <Text textTransform="uppercase" fontWeight="semibold">
               {column.label}
             </Text>
@@ -40,9 +33,7 @@ export function MatrixTable({ columns, rows }: MatrixTableProps) {
         <Box key={index} mb={['12', '12', '0']}>
           <Flex direction={['column', 'column', 'row']} gap={4} fontSize="sm">
             {Object.entries(row)
-              .filter(({ 0: key }) =>
-                columns.map((column) => column.key).includes(key),
-              )
+              .filter(({ 0: key }) => columns.map((column) => column.key).includes(key))
               .map(({ 0: key, 1: value }) => {
                 let component;
 
@@ -61,28 +52,20 @@ export function MatrixTable({ columns, rows }: MatrixTableProps) {
 
                   case 'healthGoal':
                     if (typeof value === 'object' && !Array.isArray(value)) {
-                      component = (
-                        <HealthGoal slug={value.slug} title={value.title} />
-                      );
+                      component = <HealthGoal slug={value.slug} title={value.title} />;
                     }
                     break;
 
                   case 'evidenceLevel':
-                    component = (
-                      <EvidenceLevel title={key} value={Number(value)} />
-                    );
+                    component = <EvidenceLevel title={key} value={Number(value)} />;
                     break;
 
                   case 'magnitudeLevel':
-                    component = (
-                      <MagnitudeLevel title={key} value={Number(value)} />
-                    );
+                    component = <MagnitudeLevel title={key} value={Number(value)} />;
                     break;
 
                   case 'studies':
-                    component = (
-                      <ScientificArticles title={key} relation={row} />
-                    );
+                    component = <ScientificArticles title={key} relation={row} />;
                     break;
 
                   default:

@@ -19,7 +19,7 @@ export function MagnitudeLevel({ title, value }: MagnitudeLevelProps) {
   ];
 
   return (
-    <Flex justify="center" width="100%">
+    <Flex justify="start" width="100%">
       <Text
         display={['inline-block', 'inline-block', 'none']}
         textTransform="uppercase"

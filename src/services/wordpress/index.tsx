@@ -53,8 +53,7 @@ export function wordpressServices() {
       DietarySupplementQuery(dietarySupplementName),
     );
 
-    return middleware
-      .requestAxios(null, 'wp')
+    return api
       .get<GetDietarySupplementProps>(path)
       .then(({ data }) => formatDietarySupplement(data.data.dietarySupplements.edges[0]));
   }
