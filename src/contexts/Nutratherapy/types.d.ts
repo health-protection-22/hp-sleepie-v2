@@ -10,6 +10,8 @@ export type NutratherapyContextProps = {
   filters: FiltersProps;
   habits: HabitProps[];
   relatedQuestions: RelatedQuestionProps[];
+  dnaFile: File | undefined;
+  updateDNAFile: (file: File) => void;
   updateCombinations(_updatedCombinations: CombinationsProps): void;
   updateSelectedDietarySupplements(
     _updatedSelectedDietarySupplements: DietarySupplementProps[],

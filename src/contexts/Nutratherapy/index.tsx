@@ -54,6 +54,7 @@ export const NutratherapyProvider = ({
   });
 
   const [habits, setHabits] = useState<HabitProps[]>([]);
+  const [dnaFile, setDnaFile] = useState<File>();
 
   const { setCartItems, setProductsPacks, setUserProfile } = useCartContext();
 
@@ -146,6 +147,10 @@ export const NutratherapyProvider = ({
     setIsLoading(false);
   }, [filters, data]);
 
+  const updateDNAFile = (file: File) => {
+    setDnaFile(file);
+  };
+
   const updateCombinations = useCallback((updatedCombinations: CombinationsProps) => {
     setCombinations(updatedCombinations);
   }, []);
@@ -196,6 +201,8 @@ export const NutratherapyProvider = ({
       filters,
       habits,
       relatedQuestions,
+      dnaFile,
+      updateDNAFile,
       updateCombinations,
       updateSelectedDietarySupplements,
       updateFilters,
