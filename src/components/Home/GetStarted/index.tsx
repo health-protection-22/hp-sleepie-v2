@@ -8,11 +8,13 @@ import DownloadSleepieAppImage from '../../../../public/images/DownloadSleepieAp
 import AppleStoreButton from './Buttons/AppleStore.svg';
 import PlayStoreButton from './Buttons/PlayStore.svg';
 import { ScanYourPoches } from './ScanYourPouches';
-import CycleArrow from '../../../../public/images/CycleArrow.png';
+import CycleArrow from '../../../../public/images/CycleArrow.svg';
+import { TrackYourSleep } from './TrackYourSleep';
+import { ImprovedFormula } from './ImprovedFormula';
 
 export function GetStarted() {
   return (
-    <div className="bg-backgroundCart-secondary py-[58px]">
+    <div className="bg-background-secondary py-[58px]">
       <div
         id="how-it-works"
         className="w-full flex flex-col justify-center items-center my-16 lg:mt-16 relative"
@@ -72,8 +74,10 @@ export function GetStarted() {
       <div className="relative">
         <ScanYourPoches />
         <div className="absolute max-w-fit top-[-50px] left-[33%]">
-          <Image src={CycleArrow} width={480} height={499.63} alt="Cycle arrow" />
+          <Image src={CycleArrow} width={480} height={509.5} alt="Cycle arrow" />
         </div>
+        <TrackYourSleep />
+        <ImprovedFormula />
       </div>
     </div>
   );

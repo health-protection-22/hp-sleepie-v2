@@ -35,7 +35,8 @@ export function ScientificArticles({ title, relation }: ScientificArticlesProps)
       >{`See all ${relation.studies.length} studies`}</Text>
       <StudiesModal
         dietarySupplement={relation.dietarySupplement.title}
-        healthGoal={relation.healthGoalRelation.title}
+        // @ts-ignore
+        healthGoal={relation.healthGoal.title}
         studies={relation.studies}
         isOpen={isOpen}
         onClose={onClose}
